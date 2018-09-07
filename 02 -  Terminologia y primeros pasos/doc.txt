@@ -1,0 +1,10 @@
+**Grid container: es el padre de los grid items 
+**Grid item: son cada elementos que hay en un grid container 
+y los dos unidos forma lo que se llama grid context
+**Grid-line: son las lineas que se paran los grid.
+**Grid track: es el nombre generico que recibe los grid row o grid column 
+este define la altura de un grid column o la anchura de una grid row
+**Grid cell: es aquello formado por 4 grid line, que forma una area para un grid item
+**Grid area: cualquier porcion del Grid contenida entre 4 grid lines 
+puede contener N numero de grid cells.
+ 

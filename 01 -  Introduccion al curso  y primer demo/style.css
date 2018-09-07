@@ -1,0 +1,61 @@
+ *, *::after, *::before{
+     box-sizing: border-box;
+     margin: 0;
+    padding:0;
+ }
+
+ main > *{
+     background: goldenrod;
+     padding: 10px;
+     font-size:3em; 
+ }
+
+ /* Definir el grid container  */
+ main{
+    display: grid;
+    grid-gap: 20px; /*anade espacio entre los elementod del grid*/
+    /* Se usa para definir las areas donde va las items 
+    segun los nombres puesto*/
+    grid-template-areas:
+    "header"
+    "izquierda"
+    "contenido"
+     "derecha"
+     "footer"
+} 
+
+/*  Nombrar las arear para luego 
+referise a la rejilla corrspondiente\
+este se nombra con grid-area:<nombre> de cada elemento*/
+ 
+header{
+    grid-area:header;
+}
+
+aside:first-of-type{
+    grid-area:izquierda;
+}
+article{
+    grid-area:contenido;
+}
+
+aside:last-of-type{
+    grid-area:derecha;
+
+}
+
+footer{
+    grid-area:footer
+}
+
+/* Desktop */
+
+@media only screen  and (min-width: 500px){
+    main{
+        grid-template-areas:
+        "header header header"
+        "izquierda contenido derecha"
+        "footer footer ." /*Si se pone un punto indica que esa parte va a estar vacia */
+        /*"footer footer "*/ /*no se puede dejar vacio una parte del grid por que sino se rompe */
+    }
+}

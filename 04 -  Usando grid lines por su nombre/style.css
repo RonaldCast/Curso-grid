@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height:100vh;
+    display: grid;
+    grid-gap:  10px;
+    /* grid-template-columns: 1fr 2fr; */
+    /* poniendo nombre a las grid-line */
+    /* [nombre-line] medida de las columnas o las row */
+    /* desde donde empiza hasta donde termina */
+    grid-template-columns:
+        [sidebar-start] 1fr /* [primera-line de la grid] media de la primera columna */
+        [contenido-start] 2fr;/*[inicio de la segunda-line] medida de ;as columnas */
+    grid-template-rows:
+        [header-start] 1fr
+        [contenido-start] 2fr
+        [footer-start] 1fr ;
+}
+
+
+main > *{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background:purple;
+    color: #fff;
+}
+
+/* header{
+    ya que se tiene el nombre se le asigna al elemento
+   grid-column:  sidebar-start / span 2 ;  
+}
+
+footer{
+    grid-column: sidebar-start / -1;
+} */
+
+header{
+    grid-column: sidebar-start / span 2;
+
+}
+aside{
+    grid-row: contenido-start /span 2;
+}
+
+
+ 

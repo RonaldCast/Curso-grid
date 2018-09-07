@@ -1,0 +1,27 @@
+main{
+    height:100vh;
+    display: grid;
+    /* grid-gad: row column */
+    grid-gap:10px 30px;
+    /*grid-column-gap:10px
+     grid-row-gap: 30px 
+     */
+    /* le decimos que queremos tres column de una fraccion
+     1fr es mas relevante antes auto*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    /* Implicit grid 
+    se debe de poner cuando se agrega una columna mas de la especificada en
+    el grid-template-columns */
+    grid-auto-rows: 1fr;
+}
+
+
+div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background:purple;
+    color: #fff;
+}
